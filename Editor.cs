@@ -35,7 +35,7 @@ namespace ArcaeaFanHelper
             this.Text = arcaea;
             LT.Text = "一爪一爪堆起这个软件的是 栎木-LunaroakF 一只腌制小狐狸";
             L.Text = "既然你能看到这些字，那说明你已经将软件进行分析或者反编译，我抱紧我的大尾巴求求你放过我一马可以吗ww?";
-            LT2.Text = "可以修改代码并二次发布，但请隐藏注明作者（当然明显注明也可以！）";
+            LT2.Text = "可以修改代码并二次发布，但请隐藏注明作者（当然明显注明也可以！）";//隐藏注明就用变量或者窗口组件吧！注释不好)
         }
         private void input_TextChanged(object sender, EventArgs e)
         {

@@ -1,7 +1,13 @@
-# ArcaeaFanHelper
-使用该程序将Arcaea自制谱面的一部分复制到另一个时间段，或者用于调整整体时间  
+# ArcaeaFanHelper变速谱面的复制，再变速
+使用该程序将Arcaea自制谱面的变速部分复制到另一个时间段，或者用于调整整体时间以及复制粘贴   
+最初目的是调整'Timing',将Arcade的'变速谱面'复制粘贴与变速  
 或者将谱面全部/部分变速（v2.0更新）  
 ****  
+
+****
+## 声明  
+我没有使用过Arcade因此可能有些专有名词说不上，该软件是代请人做的  
+****
 
 ## 程序图片  
 ![Image text](https://github.com/LunaroakF/Images/blob/master/ArcaeaFanHelper/2.2.jpg)  
@@ -46,3 +52,4 @@ camera(1,0.00,750.00,2125.00,90.00,-45.00,0.00,qi,1499);
 输入开始时间  
 按下转换即可开始龙王的工作~  
  - 还请注意将camera分开与其他数据处理比较好    
+  

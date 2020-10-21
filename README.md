@@ -7,10 +7,6 @@
 或者将谱面全部/部分变速（v2.0更新）  
 ****  
 
-## 声明  
-我没有使用过Arcade因此可能有些专有名词说不上，该软件是代请人做的  
-****
-
 ## 程序图片  
 ![Image text](https://github.com/LunaroakF/Images/blob/master/ArcaeaFanHelper/2.2.jpg)  
 

@@ -281,9 +281,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(877, 358);
-            this.Controls.Add(this.LT2);
-            this.Controls.Add(this.L);
-            this.Controls.Add(this.LT);
             this.Controls.Add(this.ywc);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.rwhs);
@@ -339,9 +336,6 @@
         private System.Windows.Forms.Label rwhs;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label ywc;
-        private System.Windows.Forms.Label LT;
-        private System.Windows.Forms.Label L;
-        private System.Windows.Forms.Label LT2;
     }
 }
 

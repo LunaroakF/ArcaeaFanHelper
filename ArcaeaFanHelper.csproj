@@ -89,7 +89,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Arc.ico" />
-    <None Include="BG.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -274,42 +274,6 @@
             this.ywc.TabIndex = 21;
             this.ywc.Text = "已完成:0";
             // 
-            // LT
-            // 
-            this.LT.AutoSize = true;
-            this.LT.BackColor = System.Drawing.Color.White;
-            this.LT.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LT.Location = new System.Drawing.Point(95, 6);
-            this.LT.Name = "LT";
-            this.LT.Size = new System.Drawing.Size(311, 20);
-            this.LT.TabIndex = 22;
-            this.LT.Text = "一爪一爪堆起这个软件的是 栎木 一只腌制小狐狸";
-            this.LT.Visible = false;
-            // 
-            // L
-            // 
-            this.L.AutoSize = true;
-            this.L.BackColor = System.Drawing.Color.White;
-            this.L.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.L.Location = new System.Drawing.Point(78, 29);
-            this.L.Name = "L";
-            this.L.Size = new System.Drawing.Size(710, 20);
-            this.L.TabIndex = 23;
-            this.L.Text = "既然你能看到这些字，那说明你已经将软件进行分析或者反编译，我抱紧我的大尾巴求求你放过我一马可以吗ww?";
-            this.L.Visible = false;
-            // 
-            // LT2
-            // 
-            this.LT2.AutoSize = true;
-            this.LT2.BackColor = System.Drawing.Color.White;
-            this.LT2.Font = new System.Drawing.Font("微软雅黑", 10.5F);
-            this.LT2.Location = new System.Drawing.Point(420, 6);
-            this.LT2.Name = "LT2";
-            this.LT2.Size = new System.Drawing.Size(457, 20);
-            this.LT2.TabIndex = 24;
-            this.LT2.Text = "可以修改代码并二次发布，但请隐藏注明作者（当然明显注明也可以！）";
-            this.LT2.Visible = false;
-            // 
             // Editor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);

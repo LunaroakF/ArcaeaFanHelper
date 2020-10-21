@@ -49,9 +49,6 @@
             this.rwhs = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.ywc = new System.Windows.Forms.Label();
-            this.LT = new System.Windows.Forms.Label();
-            this.L = new System.Windows.Forms.Label();
-            this.LT2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // input

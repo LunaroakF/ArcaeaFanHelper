@@ -17,10 +17,10 @@ namespace ArcaeaFanHelper
         int pgball;
         int cha;
         string[] pbstr;
-        bool RUNNING;
+        bool RUNNING;//是否正在处理
         float superduoble;
         bool bszhengshu=false;
-        string arcaea = "ArcaeaTimeEditor v2.2";
+        string arcaea = "ArcaeaTimeEditor v2.2";//标题
         public Editor()
         {
             InitializeComponent();
@@ -32,7 +32,7 @@ namespace ArcaeaFanHelper
         }  
         private void Editor_Load(object sender, EventArgs e)
         {
-            this.Text = arcaea;
+            this.Text = arcaea;//修改窗口标题为string_arcaea
         }
         private void input_TextChanged(object sender, EventArgs e)
         {
@@ -53,7 +53,7 @@ namespace ArcaeaFanHelper
         }
 
 
-        private void Run_Click(object sender, EventArgs e)
+        private void Run_Click(object sender, EventArgs e)//开始工作
         {
             try
             {
@@ -94,7 +94,7 @@ namespace ArcaeaFanHelper
             //  mancel();
         }
 
-        public void mancel()
+        public void mancel()//主线程调用过来，开始处理
         {
             if (bszhengshu)
             {
@@ -239,7 +239,7 @@ namespace ArcaeaFanHelper
                 MessageBox.Show("无法转换数据，变速倍数为无效数据，若不需要此功能请输入1", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        public void rap(int tim,string[] str)
+        public void rap(int tim,string[] str)//处理总集，到处调用
         {
             string main = str[tim];
             string test = main;
@@ -254,7 +254,7 @@ namespace ArcaeaFanHelper
                 main = ((int)((b+cha)/superduoble)).ToString();
                 TimingDisplay(tim, main, str);
             }
-            else if (main == "arc")
+            else if (main == "arc")//读入数据开头若为"arc"
             {
                 try
                 {
@@ -322,7 +322,7 @@ namespace ArcaeaFanHelper
                     ArcDisplay(tim, cost1, cost2, str);
                 }
             }
-            else if (main == "")
+            else if (main == "")//读入数据开头若为空
             {
                 if (str[tim] != string.Empty)
                 {
@@ -340,7 +340,7 @@ namespace ArcaeaFanHelper
                     refload();
                 }
             }
-            else if (main == "hold")
+            else if (main == "hold")//读入数据开头若为"hold"
             {
                 sArray = sArray[1].Split(',');
                 main = sArray[0];
@@ -353,7 +353,7 @@ namespace ArcaeaFanHelper
                 string cost2 = ((int)((b + cha) / superduoble)).ToString();
                 HoldDisplay(tim, cost1, cost2, str);
             }
-            else if (main == "camera")
+            else if (main == "camera")//读入数据开头若为"camera"
             {
                 sArray = sArray[1].Split(',');
                 main = sArray[0];
@@ -462,7 +462,7 @@ namespace ArcaeaFanHelper
             sArray = sec.Split('(');
             return sArray[1];
         }
-        public void TimingDisplay(int time,string cost,string[] str)
+        public void TimingDisplay(int time,string cost,string[] str)//timing的输出
         {
             string main = str[time];
             string[] sArray = main.Split(',');
@@ -471,7 +471,7 @@ namespace ArcaeaFanHelper
             System.Windows.Forms.Application.DoEvents();
             refload();
         }
-        public void EmptyDisplay(int time, string cost1,string cost2, string[] str)
+        public void EmptyDisplay(int time, string cost1,string cost2, string[] str)//单个键的输出
         {
             string main = str[time];
             string[] sArray = main.Split(',');
@@ -479,7 +479,7 @@ namespace ArcaeaFanHelper
             output.Text = output.Text + "(" + cost1 + "," + cost2 + main + Environment.NewLine;
             refload();
         }
-        public void CameraDisplay(int time,string cost,string[] str)
+        public void CameraDisplay(int time,string cost,string[] str)//camera的输出
         {
             string main = str[time];
             string[] sArray = main.Split(',');
@@ -487,7 +487,7 @@ namespace ArcaeaFanHelper
             output.Text = output.Text + "camera(" + cost + main+ Environment.NewLine;
             refload();
         }
-        public void ArcDisplay(int time, string cost1,string cost2, string[] str)
+        public void ArcDisplay(int time, string cost1,string cost2, string[] str)//arc的输出
         {
             string main = str[time];
             string[] sArray = main.Split(',');
@@ -495,7 +495,7 @@ namespace ArcaeaFanHelper
             output.Text = output.Text + "arc(" + cost1+","+cost2 + main + Environment.NewLine;
             refload();
         }
-        public void ArctapDisplay(int time, string cost1, string cost2,string[] tap, string[] str)
+        public void ArctapDisplay(int time, string cost1, string cost2,string[] tap, string[] str)//arctap的输出
         {
             string main = str[time];
             string[] sArray = main.Split(',');
@@ -517,7 +517,7 @@ namespace ArcaeaFanHelper
             output.Text = output.Text + "arc(" + cost1 + "," + cost2 + main +"["+tape+"];"+ Environment.NewLine;
             refload();
         }
-        public void HoldDisplay(int time, string cost1, string cost2, string[] str)
+        public void HoldDisplay(int time, string cost1, string cost2, string[] str)//Hold的输出
         {
             string main = str[time];
             string[] sArray = main.Split(',');
@@ -539,7 +539,7 @@ namespace ArcaeaFanHelper
             Thread thread = new Thread(new ThreadStart(Stop));
             thread.Start();
         }
-        public void Stop()
+        public void Stop()//终止调用
         {
             RUNNING = false;
             Stopbt.Enabled = false;
@@ -555,7 +555,7 @@ namespace ArcaeaFanHelper
             Stopbt.Text = "终止";
             Stopbt.Enabled = true;
         }
-        public void Ok()
+        public void Ok()//处理完毕调用
         {
             if (bszhengshu == false)
             {
@@ -592,7 +592,7 @@ namespace ArcaeaFanHelper
             Stopbt.Text = "终止";
             Stopbt.Enabled = true;
         }
-        public void Error()
+        public void Error()//出错调用
         {
             RUNNING = false;
             Starttime.Enabled = true;
@@ -608,7 +608,7 @@ namespace ArcaeaFanHelper
             Stopbt.Enabled = true;
         }
         bool sdck = false;
-        private void Soundck_CheckedChanged(object sender, EventArgs e)
+        private void Soundck_CheckedChanged(object sender, EventArgs e)//声音提醒
         {
             if (Soundck.Checked)
             {

@@ -1,5 +1,6 @@
 # ArcaeaFanHelper变速谱面的复制，再变速
-Arcade 变速复制 使用其将Arcaea自制谱面变速部分复制到另一个时间段，变速谱面局部/全局变速，或者用于超长段复制与变速。 适用于Arcade by Schwarzer
+Arcade 变速复制 使用其将Arcaea自制谱面变速部分复制到另一个时间段，变速谱面局部/全局变速
+或者用于超长段复制与变速。 适用于Arcade by Schwarzer
 
 使用该程序将Arcaea自制谱面的变速部分复制到另一个时间段，或者用于调整整体时间以及复制粘贴   
   
